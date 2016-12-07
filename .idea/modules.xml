@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ProgrammingLanguages.iml" filepath="$PROJECT_DIR$/ProgrammingLanguages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fileReader.java/fileReader.java.iml" filepath="$PROJECT_DIR$/fileReader.java/fileReader.java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/filesReading/filesReading.iml" filepath="$PROJECT_DIR$/filesReading/filesReading.iml" />
+    </modules>
+  </component>
+</project>
