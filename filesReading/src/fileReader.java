@@ -10,6 +10,10 @@
  *
  */
 
+/**
+ * Libraries Declaration
+ * **/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,25 +25,17 @@ public class fileReader {
    // private static final String FILENAME = "/Users/jeniphergonzalez/Documents/UT/ProgrammingLanguages/" +
      //       "resources/examples/example1.java";
     public static void main(String [] args){
-
         Scanner scanner = null;
-       // Scanner scannerLine = null;
         String []  stringArray= null;
-
-        String delim = " ";
 
         int count = 0;
 
         try {
             scanner = new Scanner(new BufferedReader(new FileReader(menu())));
-           // scannerLine = new Scanner(stringArrayLine[count]);
             if(scanner != null)
-                //stringArrayLine = new String[500];
                 stringArray = new String[500];
 
             while(scanner.hasNext()){
-                //stringArrayLine[count] = scanner.nextLine().trim().toString();
-               // System.out.println(count + ". " + stringArrayLine[count]);
 
                 stringArray[count] = scanner.next().trim().toString();
                 System.out.println(count + ". " + stringArray[count]);
@@ -51,8 +47,6 @@ public class fileReader {
                 switch (stringArray[i]) {
                     case "import":
                         new importDeclaration(stringArray[++i]);
-                       // id.verification(stringArray[++i]);
-                        //importDeclaration(stringArray[++i]);
 
                         System.out.print("This is a keyword: " + stringArray[i]+"\n");
                         System.out.println("You have an import! Line " + i);
@@ -128,6 +122,10 @@ public class fileReader {
                 scanner.close();
         }
     }
+
+    /** Menu Function
+     *  Determination of file to be compiled.
+     *  **/
     public static String menu(){
         String [] codeName = new String[7];
         String fileName;
