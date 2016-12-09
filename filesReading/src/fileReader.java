@@ -50,7 +50,10 @@ public class fileReader {
             for(int i = 0; i < stringArray.length; i++)
                 switch (stringArray[i]) {
                     case "import":
-                        importDeclaration(stringArray[++i]);
+                        new importDeclaration(stringArray[++i]);
+                       // id.verification(stringArray[++i]);
+                        //importDeclaration(stringArray[++i]);
+
                         System.out.print("This is a keyword: " + stringArray[i]+"\n");
                         System.out.println("You have an import! Line " + i);
                         i++;
@@ -159,12 +162,5 @@ public class fileReader {
 
         System.out.println(fileName );
         return fileName;
-    }
-
-    public static void importDeclaration(String term){
-        if (Objects.equals(term, "java.*;"))
-            System.out.println("We're good");
-        else
-            System.out.println("Error at Import Declaration " + term);
     }
 }
