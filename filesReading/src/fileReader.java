@@ -156,9 +156,10 @@ public class fileReader {
 
         System.out.print("Select a File name: ");
         input.nextLine();
-       fileName +=  input.nextLine();
 
-        System.out.println(fileName );
+        fileName +=  input.nextLine();
+        System.out.println(fileName);
+
         return fileName;
     }
 }
