@@ -38,7 +38,7 @@ public class fileReader {
             while(scanner.hasNext()){
 
                 stringArray[count] = scanner.next().trim().toString();
-                System.out.println(count + ". " + stringArray[count]);
+               // System.out.println(count + ". " + stringArray[count]);
 
                 count++;
             }
@@ -46,17 +46,9 @@ public class fileReader {
             for(int i = 0; i < stringArray.length; i++)
                 switch (stringArray[i]) {
                     case "import":
-                        new importDeclaration(stringArray[++i]);
-
                         System.out.print("This is a keyword: " + stringArray[i]+"\n");
                         System.out.println("You have an import! Line " + i);
-                        i++;
-                        System.out.println("You must have: java.*;");
-                        System.out.println("You have: " + stringArray[i]);
-                       if (Objects.equals(stringArray[i], "java.*;") && Objects.equals(stringArray[++i], "class"))
-                           System.out.println("true!");
-                        else
-                        System.out.println("Error! Line: " + i);
+                        new importDeclaration(stringArray[++i]);
                         break;
                     case "class":
                         System.out.println("This is a keyword: " + stringArray[i]);
@@ -123,10 +115,13 @@ public class fileReader {
         }
     }
 
-    /** Menu Function
+    /******************************************
+     *  Menu Function
      *  Determination of file to be compiled.
-     *  **/
+     ******************************************/
+
     public static String menu(){
+
         String [] codeName = new String[7];
         String fileName;
         int value;
@@ -158,7 +153,7 @@ public class fileReader {
         input.nextLine();
 
         fileName +=  input.nextLine();
-        System.out.println(fileName);
+       // System.out.println(fileName);
 
         return fileName;
     }
